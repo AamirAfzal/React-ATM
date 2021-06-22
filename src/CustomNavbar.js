@@ -28,35 +28,35 @@ function CustomNavbar() {
   return (
     <Navbar bg="dark" variant="dark">
 
-      <Navbar.Brand href="#home">Bad Bank</Navbar.Brand>
+      <Navbar.Brand href="/">Bad Bank</Navbar.Brand>
       <Nav className="mr-auto" style={{ paddingLeft: '70%' }}>
         <OverlayTrigger
           placement="bottom"
           delay={{ show: 250, hide: 400 }}
           overlay={renderTooltipAccount}
         >
-          <Nav.Link href="#account">Create Account</Nav.Link>
+          <Nav.Link href="/account">Create Account</Nav.Link>
         </OverlayTrigger>
         <OverlayTrigger
           placement="bottom"
           delay={{ show: 250, hide: 400 }}
           overlay={renderTooltipDeposit}
         >
-          <Nav.Link href="#features">Deposit</Nav.Link>
+          <Nav.Link href="/deposit">Deposit</Nav.Link>
         </OverlayTrigger>
         <OverlayTrigger
           placement="bottom"
           delay={{ show: 250, hide: 400 }}
           overlay={renderTooltipWithdraw}
         >
-          <Nav.Link href="#pricing">Withdraw</Nav.Link>
+          <Nav.Link href="/withdraw">Withdraw</Nav.Link>
         </OverlayTrigger>
         <OverlayTrigger
           placement="bottom"
           delay={{ show: 250, hide: 400 }}
           overlay={renderTooltipData}
         >
-          <Nav.Link href="#data">All Data</Nav.Link>
+          <Nav.Link href="/data">All Data</Nav.Link>
         </OverlayTrigger>
       </Nav>
     </Navbar >
