@@ -6,11 +6,12 @@ import Account from './Account'
 import Deposit from './Deposit'
 import Withdraw from './Withdraw'
 import Data from './Data'
+import Home from './Home'
 import reportWebVitals from './reportWebVitals';
 
 ReactDOM.render(
   <React.StrictMode>
-    <Data />
+    <Home />
   </React.StrictMode>,
   document.getElementById('root')
 );
