@@ -9,7 +9,7 @@ import reportWebVitals from './reportWebVitals';
 
 ReactDOM.render(
   <React.StrictMode>
-    <Withdraw />
+    <Account />
   </React.StrictMode>,
   document.getElementById('root')
 );
