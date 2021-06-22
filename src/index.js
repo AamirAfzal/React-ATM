@@ -1,6 +1,12 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route,
+  Link
+} from "react-router-dom";
 import Navbar from './CustomNavbar';
 import Account from './Account'
 import Deposit from './Deposit'
@@ -11,7 +17,17 @@ import reportWebVitals from './reportWebVitals';
 
 ReactDOM.render(
   <React.StrictMode>
-    <Home />
+    <Router>
+      <Switch>
+        <div>
+          <Route exact path="/" component={Home} />
+          <Route exact path="/account" component={Account} />
+          <Route exact path="/deposit" component={Deposit} />
+          <Route exact path="/withdraw" component={Withdraw} />
+          <Route exact path="/data" component={Data} />
+        </div>
+      </Switch>
+    </Router>
   </React.StrictMode>,
   document.getElementById('root')
 );
