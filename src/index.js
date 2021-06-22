@@ -5,11 +5,12 @@ import Navbar from './CustomNavbar';
 import Account from './Account'
 import Deposit from './Deposit'
 import Withdraw from './Withdraw'
+import Data from './Data'
 import reportWebVitals from './reportWebVitals';
 
 ReactDOM.render(
   <React.StrictMode>
-    <Withdraw />
+    <Data />
   </React.StrictMode>,
   document.getElementById('root')
 );
