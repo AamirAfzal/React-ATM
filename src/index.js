@@ -2,11 +2,14 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 import Navbar from './CustomNavbar';
+import Account from './Account'
+import Deposit from './Deposit'
+import Withdraw from './Withdraw'
 import reportWebVitals from './reportWebVitals';
 
 ReactDOM.render(
   <React.StrictMode>
-    <Navbar />
+    <Withdraw />
   </React.StrictMode>,
   document.getElementById('root')
 );
