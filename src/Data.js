@@ -1,43 +1,45 @@
-import React from 'react'
-import Navbar from "./CustomNavbar"
+import React, { useState, useEffect } from "react";
+import Navbar from "./CustomNavbar";
 import { Card, Table } from "react-bootstrap";
 
 export default function Account() {
-    return (
-        <div>
-            <Navbar />
-            <h1 style={{ marginLeft: "20px" }}>All Data</h1>
-            <br>
-            </br>
-            <Card style={{ width: '80%', marginLeft: "10%" }}>
-                <Card.Body>
+  const [users, setusers] = useState([]);
 
-                    <Table striped bordered hover>
-                        <thead>
-                            <tr>
+  useEffect(() => {
+    var existingUsers = JSON.parse(localStorage.getItem("users"));
+    console.log(existingUsers);
+    setusers(existingUsers);
+  }, []);
 
-                                <th>Email</th>
-                                <th>Name</th>
-                                <th>Password</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td>zashanjson@fashon.com</td>
-                                <td>Zeeshan</td>
-                                <td>NFAK001</td>
-                            </tr>
-                            <tr>
+  return (
+    <div>
+      <Navbar />
+      <h1 style={{ marginLeft: "20px" }}>All Data</h1>
+      <br></br>
 
-                                <td>mtj@yhoo.com</td>
-                                <td>Molana Tariq Jameel</td>
-                                <td>MTJ001</td>
-                            </tr>
+      <Card style={{ width: "80%", marginLeft: "10%" }}>
+        <Card.Body>
+          <Table striped bordered hover>
+            <thead>
+              <tr>
+                <th>Email</th>
+                <th>Name</th>
+                <th>Password</th>
+              </tr>
+            </thead>
 
-                        </tbody>
-                    </Table>
-                </Card.Body>
-            </Card>
-        </div>
-    )
+            <tbody>
+              {users.map((index) => (
+                <tr>
+                  <td>{index.email}</td>
+                  <td>{index.name}</td>
+                  <td>{index.password}</td>
+                </tr>
+              ))}
+            </tbody>
+          </Table>
+        </Card.Body>
+      </Card>
+    </div>
+  );
 }

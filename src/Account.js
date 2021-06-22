@@ -34,6 +34,7 @@ export default function Account() {
       setPassword("");
       setEmail("");
       setCheck("Add Another Account")
+      alert("Account Created Successfully")
 
 
     }
